@@ -61,8 +61,3 @@ variable "win_ec2_instance_type" {
   type = string
   description = "Windows Test EC2 Private IP"
 }
-
-# variable "win_ec2_private_ip" {
-#   type = string
-#   description = "Windows Test EC2 Private IP"
-# }
