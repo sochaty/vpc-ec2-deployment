@@ -3,14 +3,6 @@ variable "region" {
   description = "AWS Region"
 }
 
-# variable "remote_state_bucket" {
-#   description = "Remote bucket for state file"
-# }
-
-# variable "remote_state_key" {
-#   default     = "layer1/infrastructure.tfstate"
-#   description = "Remote state file to read"
-# }
 
 variable "vpc_id" {
   type        = string
@@ -72,13 +64,3 @@ variable "win_ec2_subnet_id" {
   type = string
   description = "Subnet ID for Windows Test EC2"
 }
-
-# variable "win_ec2_private_ip" {
-#   type = string
-#   description = "Windows Test EC2 Private IP"
-# }
-
-# variable "remote_state_key" {
-#   default     = "layer1/infrastructure.tfstate"
-#   description = "Remote state file to read"
-# }
