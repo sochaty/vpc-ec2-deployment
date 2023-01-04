@@ -7,12 +7,6 @@ data "aws_subnets" "private-subnets" {
   depends_on = [aws_subnet.private-subnet]
 }
 
-# resource "time_sleep" "wait_for_private-subnet" {
-#   create_duration = "300s"
-
-#   depends_on = [aws_subnet.private-subnet]
-# }
-
 data "aws_subnets" "public-subnets" {
   filter {
     name   = "tag:Name"
@@ -20,12 +14,6 @@ data "aws_subnets" "public-subnets" {
   }
   depends_on = [aws_subnet.public-subnet]
 }
-
-# resource "time_sleep" "wait_for_public-subnet" {
-#   create_duration = "300s"
-
-#   depends_on = [aws_subnet.public-subnet]
-# }
 
 resource "aws_subnet" "public-subnet" {
   count = length(var.public_subnet_cidr)
